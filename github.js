@@ -329,7 +329,6 @@ var randomEmotePool= [
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasip.png"
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyachicken.png"
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyatoast.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyacado.png"
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyachocoshroom.png"
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasourdough.png"
 	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaminecraft.png"
