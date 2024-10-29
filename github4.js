@@ -1163,8 +1163,8 @@ socket.on("chatMsg", ({ username, msg, meta, time }) => {
         const mymessage = messageBuffer.lastElementChild.lastElementChild; 
         formatMessage(mymessage); 
 
-        const userChatClass = `chat-msg-${username}`; 
-        const parentElement = mymessage.closest(`.${userChatClass}`); 
+        const userChatClass = chat-msg-${username}; 
+        const parentElement = mymessage.closest(.${userChatClass}); 
         const isMJMessage = mymessage.innerHTML.startsWith('MJ:');
         const offTopicEnabled = document.getElementById('holopeek_WatchalongOfftopic').checked || 
                                 document.getElementById('holopeek_WatchalongOfftopic2').checked;
@@ -1195,17 +1195,12 @@ socket.on("chatMsg", ({ username, msg, meta, time }) => {
             }
         }
 
-        if (mymessage.innerHTML.includes(':gargourd:')) {
-            mymessage.innerHTML = mymessage.innerHTML.replace(/:gargourd:/g, 
-                `<img class="channel-emote" title=":gargourd:" src="https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/gargerd.png">`);
-        }
-
         Object.keys(emoteMap).forEach(emote => {
             const escapedEmote = emote.replace(/[-\/\\^$.*+?()[\]{}|]/g, '\\$&'); 
             if (offTopicEnabled) {
                 if (mymessage.innerHTML.includes(emote)) {
                     mymessage.innerHTML = mymessage.innerHTML.replace(new RegExp(escapedEmote, 'g'), 
-                        `<img class="channel-emote" title="${emote}" src="${emoteMap[emote]}">`);
+                        <img class="channel-emote" title="${emote}" src="${emoteMap[emote]}">);
                 }
             } else {
                 if (mymessage.innerHTML.includes(emote)) {
