@@ -1195,6 +1195,11 @@ socket.on("chatMsg", ({ username, msg, meta, time }) => {
             }
         }
 
+        if (mymessage.innerHTML.includes(':gargourd:')) {
+            mymessage.innerHTML = mymessage.innerHTML.replace(/:gargourd:/g, 
+                `<img class="channel-emote" title=":gargourd:" src="https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/gargerd.png">`);
+        }
+
         Object.keys(emoteMap).forEach(emote => {
             const escapedEmote = emote.replace(/[-\/\\^$.*+?()[\]{}|]/g, '\\$&'); 
             if (offTopicEnabled) {
