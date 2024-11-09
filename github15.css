@@ -1937,6 +1937,9 @@ input.form-control[type=text], input.form-control[type=password], input.form-con
  background-color:rgba(20,20,20,1)!important;
     color: #c8c8c8;
 }
+.form-control {
+    height: 32px;
+}
 #chatinputrow button{
 	height:38px;
 	font-style:bolder;
