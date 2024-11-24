@@ -304,5 +304,6 @@
     ":flarewheeze:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/FlareWheeze.ogg"},
     ":fukkenweirdcat:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/fukkenweirdcat.ogg"},
     ":rissa:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/NerissaWomen.ogg"},
-    ":grempreg:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/grempreg.ogg"}	  
+    ":grempreg:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/grempreg.ogg"},
+	":gurabooba:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gurabooba.ogg"}
 }
