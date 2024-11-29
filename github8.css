@@ -1737,10 +1737,10 @@ img.channel-emote[title$=":kaelabonk:"]  {
 @font-face {  font-family: Rans; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/rans.ttf); }
 .chat-msg-Pepper { font-family: Rans1; }
 @font-face {  font-family: Rans1; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/zalgo.ttf); }
-.chat-msg-McFin { font-family: Rans3; }
+.chat-msg-McFin { font-family: Rans2; }
 @font-face {  font-family: Rans2; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/SGA8.ttf); }
 .chat-msg-Shifumi { font-family: Rans3; }
-@font-face {  font-family: Rans2; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/Kusa.otf); }
+@font-face {  font-family: Rans3; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/Kusa.otf); }
 /*general css*/
 ::-webkit-scrollbar {width: 6px; height: 6px;}
 ::-webkit-scrollbar-corner {background: rgba(0,0,0,0);}
