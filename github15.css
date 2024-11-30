@@ -833,10 +833,10 @@
 
 .chat-msg-Nautilus .timestamp, .chat-msg-nautilus .timestamp  {
     color:transparent;
-    font-size: 7px;
+    font-size: 7px !important;
     background-size: 50px 15px;
     background-image: url('https://raw.githubusercontent.com/om3tcw/r/emotes/eyes/polka4.png');
-    background-position: 20% 0%;
+    background-position: 60% 0%;
     background-repeat: no-repeat}
 
 .chat-msg-Braperina .timestamp {
