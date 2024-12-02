@@ -306,5 +306,6 @@
     ":rissa:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/NerissaWomen.ogg"},
     ":grempreg:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/grempreg.ogg"},
 	":gurabooba:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gurabooba.ogg"},
-	":gigiwants:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gigiwants.ogg"}
+	":gigiwants:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gigiwants.ogg"},
+	":doobro:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/doobro.ogg"}
 }
