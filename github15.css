@@ -2247,3 +2247,16 @@ form input#chatline {background-size: auto:}
 .linewrap {    background-color: rgba(0, 0, 0, 0.5); }
 #messagebuffer {
      background-color: rgba(0, 0, 0, 0.5)!important; }
+
+     /* marble reverse emote commit */
+
+.reverse {
+
+    display: inline-block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+}
