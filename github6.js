@@ -134,7 +134,7 @@ $(window).bind('keydown', function(event) {
                 inputBox.setSelectionRange(0,inputVal.length);
                 }
             break;
-        case 's':                               //spoiler
+        case 'q':                               //spoiler
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
@@ -151,7 +151,7 @@ $(window).bind('keydown', function(event) {
                 }
                 break;
             }
-        case 'q':                               //reverse
+        case 's':                               //reverse
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
