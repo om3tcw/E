@@ -167,7 +167,7 @@ $(window).bind('keydown', function(event) {
                     }
                 }
                 break;
-			}
+	}
     }
 });
  
