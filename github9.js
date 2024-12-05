@@ -159,7 +159,7 @@ $(window).bind('keydown', function(event) {
                     var selEnd = inputBox.selectionEnd;
                 if (inputBox === document.activeElement){
                     if(inputBox.selectionStart == inputBox.selectionEnd){
-                        inputBox.value = inputVal.substring(0,selSt) +"[r]"+ inputVal.substring(selSt,selEnd) +"[/r]"+inputVal.substring(selEnd,inputVal.length);
+                        inputBox.value = inputVal.substring(0,selSt) +"[r] "+ inputVal.substring(selSt,selEnd) +" [/r]"+inputVal.substring(selEnd,inputVal.length);
                         inputBox.setSelectionRange(selSt +4,selSt +4);
                     } else if (inputBox.selectionStart < inputBox.selectionEnd){
                         inputBox.value = inputVal.substring(0,selSt) +"[r] "+ inputVal.substring(selSt,selEnd) +" [/r]"+inputVal.substring(selEnd,inputVal.length);
