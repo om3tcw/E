@@ -134,7 +134,7 @@ $(window).bind('keydown', function(event) {
                 inputBox.setSelectionRange(0,inputVal.length);
                 }
             break;
-        case 'q':                               //spoiler
+        case 's':                               //spoiler
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
@@ -151,7 +151,7 @@ $(window).bind('keydown', function(event) {
                 }
                 break;
             }
-        case 's':                               //reverse
+		case 'q':                               //reverse
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
@@ -167,8 +167,9 @@ $(window).bind('keydown', function(event) {
                     }
                 }
                 break;
-	}
+		}
     }
+}
 });
  
 // ============================= REPLACE VIDEO =================================== //
