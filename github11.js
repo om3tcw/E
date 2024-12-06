@@ -155,6 +155,7 @@ $(window).bind('keydown', function(event) {
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
+		    event.stopPropagation();
                     var selSt = inputBox.selectionStart;
                     var selEnd = inputBox.selectionEnd;
                 if (inputBox === document.activeElement){
