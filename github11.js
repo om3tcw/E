@@ -151,7 +151,7 @@ $(window).bind('keydown', function(event) {
                 }
                 break;
             }
-		case 'q':                               //reverse
+		case 'r':                               //reverse
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
