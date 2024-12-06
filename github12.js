@@ -151,10 +151,11 @@ $(window).bind('keydown', function(event) {
                 }
                 break;
             }
-		case 'q':                               //reverse
+		case 'r':                               //reverse
                 if (!keyHeld){
                     keyHeld=true;
                     event.preventDefault();
+		    event.stopPropagation();
                     var selSt = inputBox.selectionStart;
                     var selEnd = inputBox.selectionEnd;
                 if (inputBox === document.activeElement){
