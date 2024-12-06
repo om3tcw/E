@@ -120,7 +120,14 @@ $('<li role="presentation"><a role="tab" data-toggle="tab" aria-expanded="false"
     }
  
 //  ===========================================  KEYBINDS  ========================================== //
-var keyHeld = false;                    //control keypress rapidfire
+/* 
+    Custom Keybinds
+    Ctrl+a: doesn't work, fuck you luxes
+    Ctrl+s: Makes spoiler tags
+    Ctrl+q: Makes you close your firefox on linux, or add a reverse tag
+*/
+
+    var keyHeld = false;                    //control keypress rapidfire
 $(window).bind('keyup', function(){keyHeld=false;}); 
 $(window).bind('keydown', function(event) {
     var inputBox = document.getElementById("chatline");
@@ -925,12 +932,19 @@ if (document.readyState === "loading") {
 
 })();
 
+
+
+
+/*
+
 $('#messagebuffer').off('click').click(e => { 
     let t = e.target, p = t.parentElement;
     if(e.button != 0) return;
     if(t.className == 'channel-emote')
         $('#chatline').val((i, v) => v + e.target.title + " ").focus();
 })
+
+*/
 
 // --- Slav's Enhancements ---
 var soundposts;
