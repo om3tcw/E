@@ -308,5 +308,6 @@
 	":gurabooba:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gurabooba.ogg"},
 	":gigiwants:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gigiwants.ogg"},
 	":doobro:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/doobro.ogg"},
-	":towangry:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/towangry.ogg"}
+	":towangry:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/towangry.ogg"},
+	":raorapoint:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/raorapoint.ogg"}
 }
