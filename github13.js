@@ -1122,6 +1122,13 @@ let soundpostPlaybackState = {};
 const defaultVolume = 0.1;
 const defaultAdditionalPlayTime = 3;
 
+function getSoundpostURL(emoteData) {
+    for (const alternate of emoteData.alternates || []) {
+        if (Math.random() < alternate.chance) return alternate.url;
+    }
+    return emoteData.soundurl;
+}
+
 function initializeSoundpost(emote, soundurl, preload = false) {
     if (!soundpostPlaybackState[emote]) {
         soundpostPlaybackState[emote] = {
@@ -1163,6 +1170,12 @@ function playSoundpost(emote, additionalPlayTime = defaultAdditionalPlayTime) {
         soundpost.audio.currentTime = 0;
         soundpost.totalPlayTime = 0;
     }, playDuration * 1000);
+}
+
+function initializeAlternateSoundpost(emote) {
+    const emoteData = soundposts[emote];
+    const soundurl = getSoundpostURL(emoteData);
+    initializeSoundpost(emote, soundurl, true);
 }
 
 const emoteMap = {
