@@ -273,7 +273,7 @@
     ":reinemycrosshairisonthefloorcusimlookingformylifepurpose:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/reinemycrosshairisonthefloorcusimlookingformylifepurpose.ogg"},
     ":amerikorone:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/amerikorone.ogg"},
     ":g:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/g.ogg"},
-    ":raoraspin:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/raoraspin.ogg"},
+    ":raoraspin:": { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/raoraspin.ogg",   "alternates": [   { "url": "https://cdn.example.com/sounds/raora1.ogg", "chance": 0.04 },     { "url": "https://cdn.example.com/sounds/raora2.ogg", "chance": 0.02 }   ]  },
     ":who:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/who.ogg"},
     ":hajimebancho:" : { "soundurl": "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/hajimebancho.ogg"},
     ":gigiNOW:" : { "soundurl": " https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/gigiNOW.ogg"},
