@@ -67,7 +67,7 @@ if (!this[CHANNEL.name].favicon) {
     userlist: {
       active: 1,
       rank: -1,
-      url: "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/userlist.js",
+      url: "https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/js/userlist.js",
       done: true,
     },
     playOnHoverom3tcw: {
