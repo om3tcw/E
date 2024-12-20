@@ -1271,9 +1271,9 @@ function runescape(message) {
   message.innerHTML = html;
 }
 
-function formatMessage(msg) {
-  if (msg.startsWith("/runescape")) {
-    runescape(msg);
+function formatMessage(message) {
+  if (message.innerHTML.startsWith("/runescape")) {
+    runescape(message);
   }
 }
 
@@ -1283,8 +1283,8 @@ let playedSoundposts = [];
 const chatMsgElements = document
   .querySelectorAll('#messagebuffer [class|="chat-msg"]')
   .forEach((element) => {
-    const msg = element.lastElementChild;
-    formatMessage(msg);
+    const mymessage = element.lastElementChild;
+    formatMessage(mymessage);
   });
 
 function setCookie(name, value) {
@@ -1500,8 +1500,9 @@ socket.on("chatMsg", ({ username, msg, meta, time }) => {
     username.toLowerCase() !== "[server]" &&
     username.toLowerCase() !== "[voteskip]"
   ) {
-    //msg is already part of the socket event, slav.
-    formatMessage(msg);
+    const mymessage = messageBuffer.lastElementChild.lastElementChild;
+    formatMessage(mymessage);
+
     const userChatClass = `chat-msg-${username}`;
     const parentElement = mymessage.closest(`.${userChatClass}`);
     const isMJMessage = mymessage.innerHTML.startsWith("MJ:");
