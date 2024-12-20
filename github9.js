@@ -348,31 +348,25 @@ $("#main").addClass("flex").children().first().children().first().after('<div id
 
 
 //  ===========================================  EMOTE BUTTON  ========================================== //
-//TODO Fix
 
-    var anyaEmotes;
-fetch('https://raw.githubusercontent.com/ramarble/marbl/refs/heads/staging/anyaEmotes.json')
-.then(response => response.json())
-.then(data => {
-    anyaEmotes = data;
-    console.log(anyaEmotes);
-})
-.catch(error => {
-  console.error(error);
-});
-    
-function drawRandomEmote(){
+    var anyaEmotesJson;
+    fetch('https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/anyaEmotes.json')
+    .then(response => response.json())
+    .then(data => {
+        anyaEmotesJson = data;
+    })
+    .catch(error => {
+    console.error(error);
+    });
 
 
-
-
-	return randomEmotePool[Math.floor(Math.random() *randomEmotePool.length)];
-};
+    function drawRandomEmoteFromJson(json) {
+    return anyaEmotesJson.emotes[Math.floor(Math.random()*anyaEmotesJson.emotes.length)]
+} 
 
 $("#emotelistbtn").click(function(){
-	$(this).css("background-image","url("+drawRandomEmote()+")");
+	$(this).css("background-image","url("+drawRandomEmoteFromJson(anyaEmote.emotes)+")");
 }).html("")
-
 
 
     // --- holo Button ---
