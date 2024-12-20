@@ -70,6 +70,21 @@ if (!this[CHANNEL.name].favicon) {
       url: "https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/js/userlist.js",
       done: true,
     },
+<<<<<<< HEAD:github12.js
+=======
+    playOnHoverom3tcw: {
+      active: 1,
+      rank: -1,
+      url: "https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/js/hover_on_play_om3tcw.js",
+      done: true,
+    },
+    anyaEmoteButton: {
+      active: 1,
+      rank: -1,
+      url: "https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/js/emote_button/emotebutton.js",
+      done: true,
+    },
+>>>>>>> 171fa0b (emote button):js/loaderMain.js
   },
   getScript: function (url, success, cache = true) {
     return jQuery.ajax({
@@ -1573,7 +1588,7 @@ socket.on("chatMsg", ({ username, msg, meta, time }) => {
 
       if (mymessage.innerHTML.startsWith("boo")) {
         const myaudio = new Audio(
-          "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/boo.ogg"
+          "https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/js/soundposts/sounds/boo.ogg"
         );
         myaudio.volume = defaultVolume;
         myaudio.play();
