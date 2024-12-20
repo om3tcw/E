@@ -18,12 +18,13 @@ various:{notepad:true,emoteToggle:false}},
  
  
 modules:{
-settings:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/customsettingsmodal.js",done:true},
-playlist:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/playlistenhancement2.js",done:true},
-privmsg:{active:1,rank:1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/pmenhancement.js",done:true},  
-notifier:{active:1,rank:-1, url: "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/notifier.js",done: true},
-layout:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/layoutoptions.js",done:true},
-userlist:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/userlist.js",done:true}
+    settings:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/customsettingsmodal.js",done:true},
+    playlist:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/playlistenhancement2.js",done:true},
+    privmsg:{active:1,rank:1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/pmenhancement.js",done:true},  
+    notifier:{active:1,rank:-1, url: "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/notifier.js",done: true},
+    layout:{active:1,rank:-1,url:"https://cdn.jsdelivr.net/gh/om3tcw/r/layoutoptions.js",done:true},
+    userlist: { active: 1, rank: -1, url: "https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/userlist.js", done: true },
+    mikoDing: {active: 1, rank: -1, url: "todo", done: true}
 },getScript:function(url,success,cache=true){return jQuery.ajax({url:url,cache:cache,success:success,type:"GET",dataType:"script"})},initialize:function(){if(CLIENT.modules){return}else{CLIENT.modules=this}window[CHANNEL.name].modulesOptions=this.options;console.info("[XaeModule]","Begin Loading.");this.index=Object.keys(this.modules);this.sequencerLoader();this.cache=false},sequencerLoader:function(){if(this.state.prev){setTimeout(this.modules[this.state.prev].done,0);this.state.prev=""}if(this.state.pos>=this.index.length){return console.info("[XaeModule]","Loading Complete.")}var currKey=this.index[this.state.pos];if(this.state.pos<this.index.length){if(this.modules[currKey].active){if(this.modules[currKey].rank<=CLIENT.rank){console.info("[XaeModule]","Loading:",currKey);this.state.prev=currKey;this.state.pos++;let cache=typeof this.modules[currKey].cache=="undefined"?this.cache:this.modules[currKey].cache;this.getScript(this.modules[currKey].url,this.sequencerLoader.bind(this),cache)}else{if(this.modules[currKey].rank===0&&CLIENT.rank===-1){(function(module){socket.once("login",data=>{if(data.success){this.getScript(module.url,false,this.cache)}})})(this.modules[currKey])}this.state.pos++;this.sequencerLoader()}}else{this.state.pos++;this.sequencerLoader()}}},state:{prev:"",pos:0}}).initialize();
  
  
@@ -337,37 +338,6 @@ $("#togglemotd").click(function(){
 });
 	
 $("#main").addClass("flex").children().first().children().first().after('<div id="chatdisplayrow" class="row"></div>').next().append($("#userlist,#messagebuffer").removeAttr("style")).after('<div id="chatinputrow" class="row"></div>').next().append($("#emotebtndiv,#chatwrap>form"))
-
-//mikoboat
-    const mikoDing = document.createElement("audio");
-    mikoDing.setAttribute('src','https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/soundposts/sounds/om3tcw.ogg');
-    mikoDing.loop = true;
-    mikoDing.volume = 0.1;
-    document.getElementsByClassName("navbar-brand")[0].onmouseenter = () => mikoDing.play();
-    document.getElementsByClassName("navbar-brand")[0].onmouseleave = () => mikoDing.pause();
-
-
-//  ===========================================  EMOTE BUTTON  ========================================== //
-
-    var anyaEmotesJson;
-    fetch('https://cdn.jsdelivr.net/gh/ramarble/marbl@staging/anyaEmotes.json')
-    .then(response => response.json())
-    .then(data => {
-        anyaEmotesJson = data;
-    })
-    .catch(error => {
-    console.error(error);
-    });
-
-
-    function drawRandomEmoteFromJson(jsonObject) {
-    return jsonObject[Math.floor(Math.random()*jsonObject.length)]
-} 
-
-$("#emotelistbtn").click(function(){
-	$(this).css("background-image","url("+drawRandomEmoteFromJson(anyaEmotesJson.emotes)+")");
-}).html("")
-
 
     // --- holo Button ---
 
