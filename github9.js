@@ -350,17 +350,20 @@ $("#main").addClass("flex").children().first().children().first().after('<div id
 //  ===========================================  EMOTE BUTTON  ========================================== //
 //TODO Fix
 
-function drawRandomEmote(){
-
-fetch('https://raw.githubusercontent.com/om3tcw/r/emotes/soundposts/soundposts.json')
+    var anyaEmotes;
+fetch('https://raw.githubusercontent.com/ramarble/marbl/refs/heads/staging/anyaEmotes.json')
 .then(response => response.json())
 .then(data => {
-  soundposts = data;
-  console.log(soundposts);
+    anyaEmotes = data;
+    console.log(anyaEmotes);
 })
 .catch(error => {
   console.error(error);
 });
+    
+function drawRandomEmote(){
+
+
 
 
 	return randomEmotePool[Math.floor(Math.random() *randomEmotePool.length)];
