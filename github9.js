@@ -360,12 +360,12 @@ $("#main").addClass("flex").children().first().children().first().after('<div id
     });
 
 
-    function drawRandomEmoteFromJson(json) {
-    return anyaEmotesJson.emotes[Math.floor(Math.random()*anyaEmotesJson.emotes.length)]
+    function drawRandomEmoteFromJson(jsonObject) {
+    return jsonObject[Math.floor(Math.random()*jsonObject.length)]
 } 
 
 $("#emotelistbtn").click(function(){
-	$(this).css("background-image","url("+drawRandomEmoteFromJson(anyaEmote.emotes)+")");
+	$(this).css("background-image","url("+drawRandomEmoteFromJson(anyaEmotesJson.emotes)+")");
 }).html("")
 
 
