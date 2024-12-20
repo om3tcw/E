@@ -1,22 +1,9 @@
-Poruka oruka? Oruyo!
+Marble's staging changes for the cytube
 
-Repository for the /hlgg/ cytube
+Soundposts-readme.txt
 
-  Please avoid making too much of a mess if you change anything
+When uploading your soundpost, remember to normalize the audio to -6 db.
+You can do this using ffmpeg-normalize using the following function in powershell or command prompt:
+ffmpeg-normalize ".\%%~nxx" -nt peak -t -6 -c:a libvorbis -ext ogg -of .\output
 
-EMOTES
-  Please keep emote names the same as they are on cytube
-  If you rename an emote on the cytube, please rename the file here on the github as well
-  for the filenames, emotes with "?" and "/" in the name have those characters changed, ? becomes - and / becomes _ 
-  
-  TO UPLOAD EMOTES:
-    1. Click on the "emotes" folder
-    2. Click "Add file" and on the dropdown click "Upload files"
-    3. Add your emotes
-    4. click "Commit changes"
-
-CSS/JS
-  If you make changes to any of the css or js files that are pushed through jsdelivr, they seem to take around a day to actually update, so consider uploading a new temporary file   if you want the changes to be immediate
-
-
-Stay hydrated, hoocha!
+~~~~~ Otherwise add the emote and link below this line and ping me ~~~~~
