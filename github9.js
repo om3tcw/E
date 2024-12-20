@@ -124,7 +124,7 @@ $('<li role="presentation"><a role="tab" data-toggle="tab" aria-expanded="false"
     Custom Keybinds
     Ctrl+a: doesn't work, fuck you luxes
     Ctrl+s: Makes spoiler tags
-    Ctrl+q: Makes you close your firefox on linux, or add a reverse tag
+    Ctrl+r: Makes you close your firefox on linux, or add a reverse tag
 */
 
     var keyHeld = false;                    //control keypress rapidfire
@@ -348,60 +348,21 @@ $("#main").addClass("flex").children().first().children().first().after('<div id
 
 
 //  ===========================================  EMOTE BUTTON  ========================================== //
-var randomEmotePool= [
-	"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyascone.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasip.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyachicken.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyatoast.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyachocoshroom.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasourdough.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaminecraft.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaclif.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasalman.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaeggsandwich.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyashitpost.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyacereal.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyatect.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasteak.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyanoodle.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyagogurt.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyawrappedburger.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyapolitan.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyagraph.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaoreoshake.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyataco.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyacorndog.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaparfait.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasandwich.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasandwich2.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyamage.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyapirouette.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyafry.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyadonut.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyamelonsoda.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaknife.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaahituna.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyapumpkinpie.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyaseesyourhotpocket.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyart.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyamouth.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyawithagun.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyan.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyachurro.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyasugarcookie.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyainahair.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyagoslings.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyacube.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyamami.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyablink.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyawarp.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/aranya.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyapizza.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyamail.png"
-	,"https://raw.githubusercontent.com/om3tcw/r/emotes/emotes/anyatoast2.png"
-	];
+//TODO Fix
 
 function drawRandomEmote(){
+
+fetch('https://raw.githubusercontent.com/om3tcw/r/emotes/soundposts/soundposts.json')
+.then(response => response.json())
+.then(data => {
+  soundposts = data;
+  console.log(soundposts);
+})
+.catch(error => {
+  console.error(error);
+});
+
+
 	return randomEmotePool[Math.floor(Math.random() *randomEmotePool.length)];
 };
 
@@ -932,19 +893,6 @@ if (document.readyState === "loading") {
 
 })();
 
-
-
-
-/*
-
-$('#messagebuffer').off('click').click(e => { 
-    let t = e.target, p = t.parentElement;
-    if(e.button != 0) return;
-    if(t.className == 'channel-emote')
-        $('#chatline').val((i, v) => v + e.target.title + " ").focus();
-})
-
-*/
 
 // --- Slav's Enhancements ---
 var soundposts;
