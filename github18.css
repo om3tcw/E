@@ -833,10 +833,8 @@
 
 .chat-msg-Nautilus .timestamp, .chat-msg-nautilus .timestamp  {
     color:transparent;
-    font-size: 7px !important;
     background-size: 50px 15px;
     background-image: url('https://raw.githubusercontent.com/om3tcw/r/emotes/eyes/polka4.png');
-    background-position: 60% 0%;
     background-repeat: no-repeat}
 
 .chat-msg-Braperina .timestamp {
@@ -1735,7 +1733,7 @@ img.channel-emote[title$=":kaelabonk:"]  {
 .chat-msg-Noroba, .chat-msg-Noromo { font-family: Noroba; }
 @font-face {  font-family: Noroba; src: url(https://files.catbox.moe/jnh2x7.ttf); }
 .chat-msg-nautilus { font-family: Rans; }
-@font-face {  font-family: Rans; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/flyingo.ttf); }
+@font-face {  font-family: Rans; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/uabsans.ttf); }
 .chat-msg-Cunny { font-family: Cheeky; }
 @font-face {  font-family: Cheeky; src: url(https://cdn.jsdelivr.net/gh/om3tcw/r@emotes/other/cheeky.ttf); }
 /*general css*/
