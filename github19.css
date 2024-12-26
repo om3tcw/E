@@ -272,6 +272,7 @@
 .chat-msg-fuckhead .timestamp {
     color:transparent;
     background-size: 50px 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     background-image: url('https://raw.githubusercontent.com/om3tcw/r/emotes/eyes/fbk.png');
     background-position: center;
     background-repeat: no-repeat}
@@ -496,6 +497,7 @@
 
 .chat-msg-Noroba .timestamp, .chat-msg-Noromo .timestamp {
     color:transparent;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     background-size: 50px 15px;
     background-image: url('https://raw.githubusercontent.com/om3tcw/r/emotes/eyes/roboco.png');
     background-position: center;
@@ -833,6 +835,7 @@
 
 .chat-msg-Nautilus .timestamp, .chat-msg-nautilus .timestamp  {
     color:transparent;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     background-size: 50px 15px;
     background-image: url('https://raw.githubusercontent.com/om3tcw/r/emotes/eyes/polka4.png');
     background-repeat: no-repeat}
