@@ -1446,7 +1446,7 @@ img.channel-emote[title$=":teamatepudding:"]
 img.channel-emote[title$=":rockcandy:"] {animation: bibo 0.4s  infinite;}
 
 img.channel-emote[title$=":gigispeed:"] {
-    animation:  slide-right 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation:  slide-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
     animation-timing-function: linear;
     animation-name: gigispeed;}
 
