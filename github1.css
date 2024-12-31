@@ -1445,6 +1445,11 @@ img.channel-emote[title$=":teamatepudding:"]
 
 img.channel-emote[title$=":rockcandy:"] {animation: bibo 0.4s  infinite;}
 
+img.channel-emote[title$=":gigispeed:"] {
+    animation:  slide-right 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-timing-function: linear;
+    animation-name: gigispeed;}
+
 /* Keyframes */
 @keyframes sanalive {
      0%    { transform: scale(6) rotate(720deg); left:275px; bottom:550px;}
@@ -1572,6 +1577,11 @@ img.channel-emote[title$=":rockcandy:"] {animation: bibo 0.4s  infinite;}
     50%  { left:150px; top:-150px; transform: rotate(180deg); } 
     75%  { left:150px; top:0px; transform: rotate(270deg);} 
     100% { left:0px; top:00px;  transform: rotate(360deg);}}
+	
+@keyframes gigispeed {
+    0%   {  transform: scale(1); left:00px; top:00px;}
+    50%  {  transform: scale(.5); left:300px; bottom:000px;} 
+    100% {  transform: scale(0); left:600px; top:000px; }}
 
 /* Flashing eyes - Legacy */
 
