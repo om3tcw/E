@@ -1586,8 +1586,8 @@ let soundpostState = getCookie("soundpostState") === "true";
 
 const soundpostButton = document.createElement("button");
 soundpostButton.style.backgroundImage = soundpostState
-    ? "url('https://raw.githubusercontent.com/om3tcw/r/refs/heads/emotes/other/schizo.gif')"
-    : "url('https://raw.githubusercontent.com/om3tcw/r/refs/heads/emotes/other/medicated.png')";
+    ? "url('https://raw.githubusercontent.com/om3tcw/r/refs/heads/emotes/emotes/schizo.gif')"
+    : "url('https://raw.githubusercontent.com/om3tcw/r/refs/heads/emotes/emotes/medicated.png')";
 soundpostButton.style.backgroundSize = "cover";
 
 soundpostButton.addEventListener("click", () => {
