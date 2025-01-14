@@ -243,8 +243,8 @@ $(window).bind('keydown', function (event) {
 
 // Replace Video
 (function () {
-    $('#plcontrol').append('<input type="button" class="btn btn-sm btn-default" value="ðŸ€" id="replacebutton">');
-    $('#plcontrol').append('<input type="button" class="btn btn-sm btn-default" value="ðŸ”ƒ" id="refreshbutton">');
+    $('#plcontrol').append('<input type="button" class="btn btn-sm btn-default" value="🐀" id="replacebutton">');
+    $('#plcontrol').append('<input type="button" class="btn btn-sm btn-default" value="🔃" id="refreshbutton">');
 
     $('#replacebutton').click(function () {
         let newId = window.prompt("Replace the current playing stream\nRefresh to undo\n\nSwitching back to YouTube from Twitch is broken, so reloading the player is necessary in that case\n\nYoutube URL/ID:", "");
